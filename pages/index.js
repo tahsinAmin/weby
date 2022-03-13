@@ -44,13 +44,21 @@ class index extends React.Component {
             <button onClick={this.capture}>Capture and Submit photo</button>
           </div>
         ) : (
-          <button type='button' onClick={this.enableWebcam}>
-            Enable webcam
-          </button>
+          <div></div>
         )}
+        <button type='button' onClick={this.enableWebcam}>
+          {this.state.webcamEnabled ? "Disable" : "Enable"} webcam
+        </button>
       </div>
     );
   }
 }
 
 export default index;
+
+// https://github.com/mozmorris/react-webcam/issues
+// https://github.com/mozmorris/react-webcam/issues/333
+// https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
+// https://www.youtube.com/watch?v=0HJ1cMBkWJ4
+// https://www.youtube.com/watch?v=BvkDFX8K5LE
+// https://stackoverflow.com/questions/54443545/reactjs-how-to-off-and-on-webcam-in-reactjs
